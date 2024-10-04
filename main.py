@@ -32,5 +32,5 @@ def main():
     _, a, b, operation = sys.argv
     calculate_and_print(a, b, operation)
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()
