@@ -1,3 +1,9 @@
+from app import App
+
+if __name__ == "__main__":
+    app = App().start()
+
+'''
 import sys
 from calculator import Calculator
 from decimal import Decimal, InvalidOperation
@@ -32,5 +38,6 @@ def main():
     _, a, b, operation = sys.argv
     calculate_and_print(a, b, operation)
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    app = App().start()
+'''

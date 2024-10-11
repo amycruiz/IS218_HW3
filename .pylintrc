@@ -10,7 +10,8 @@ load-plugins=pylint_django
 disable=redefined-outer-name,
         unused-argument,
         invalid-name,
-        unnecessary-dunder-call
+        unnecessary-dunder-call,
+        line-too-long
 
 [REPORTS]
 # Set the output format. Available formats: text, parseable, colorized, json, msvs (visual studio) and html
