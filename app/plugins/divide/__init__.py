@@ -20,4 +20,3 @@ class DivideCommand(Command):
 
         except(ValueError, IndexError, InvalidOperation):
             print("Invalid input. Please provide two valid numbers in the format: divide <num1> <num2>")
-        
