@@ -23,6 +23,7 @@ class App:
     def start(self):
         self.load_plugins()
         print("Type 'exit' to exit.")
+        print("Avaliable commands:", self.command_handler.get_avaliable_commands())
         while True:
             user_input = input(">>> ").strip()
             if user_input.lower() == 'exit':
@@ -30,4 +31,8 @@ class App:
             parts = user_input.split()
             command_name = parts[0]
             args = parts[1:]
-            self.command_handler.execute_command(command_name, *args)
+
+            try:
+                self.command_handler.execute_command(command_name, *args)
+            except Exception as e:
+                print(f"Error: {e}")
