@@ -12,8 +12,8 @@ class CommandHandler:
     def register_command(self, command_name: str, command: Command):
         self.commands[command_name] = command
 
-    def execute_command(self, command_name: str):
+    def execute_command(self, command_name: str, *args):
         try:
-            self.commands[command_name].execute()
+            self.commands[command_name].execute(*args)
         except KeyError:
             print(f"No such command: {command_name}")

@@ -24,4 +24,10 @@ class App:
         self.load_plugins()
         print("Type 'exit' to exit.")
         while True:
-            self.command_handler.execute_command(input(">>> ").strip())
+            user_input = input(">>> ").strip()
+            if user_input.lower() == 'exit':
+                break
+            parts = user_input.split()
+            command_name = parts[0]
+            args = parts[1:]
+            self.command_handler.execute_command(command_name, *args)
