@@ -26,7 +26,7 @@ class App:
         while True:
             user_input = input(">>> ").strip()
             if user_input.lower() == 'exit':
-                break
+                raise SystemExit("Exiting...")
             parts = user_input.split()
             command_name = parts[0]
             args = parts[1:]

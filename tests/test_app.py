@@ -12,7 +12,7 @@ import pytest
 
 def test_app_start_unknown_command(capfd, monkeypatch):
     inputs = iter(['unknown_command', 'exit'])
-    monkeypatch.setattr('buitins.input', lambda _: next(inputs))
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
 
     app = App()
 
