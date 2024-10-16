@@ -1,4 +1,5 @@
-'''import pytest
+'''
+import pytest
 from main import calculate_and_print
 
 @pytest.mark.parametrize("a_string, b_string, operation_string, expected_string", [
